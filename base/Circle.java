@@ -38,6 +38,16 @@ public class Circle implements myInterface.Shape
             return false;
     }
     /**
+     * 원의 x좌표, y좌표, 반지름을 출력하는 메소드
+     *
+     * @return    원의 x좌표, y좌표, 반지름
+     */
+    public String printCircle()
+    {
+        return "원(" + this.x + ", " + this.y + ", " + this.radius + ")";
+    }
+
+    /**
      * 원의 넓이를 구하는 메소드
      *
      * @return    원의 넓이
@@ -46,6 +56,6 @@ public class Circle implements myInterface.Shape
     public double getArea()
     {
         int rad = (this.radius).intValue();
-        return 2 * PI * rad;
+        return PI * (rad * rad);
     }
 }

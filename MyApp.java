@@ -28,24 +28,16 @@ public class MyApp
      * Interger 배열에 Stirng data를 저장하는 메소드
      *
      * @param  data  Circle 객체를 만들기 위해 필요한 정보
-     * @return    배열
+     * @return    Interger 배열
      */
-    public static Integer[] makeToken(String dataToken)
+    public static Integer[] makeToken(String data)
     {
-        int i = 0;
-        String data;
-        StringTokenizer array = new StringTokenizer(dataToken, ",");
-        while(array.hasMoreTokens() == true){
-            String[] temp1 = data.split(",");
-            Integer[] temp = new Integer[temp1.length];
-            temp[i] += Integer.parseInt(array.nextToken());
-            i++;
-            for(int j = 0 ; j < temp1.length ; j++){
-                temp[j] = Integer.valueOf(temp1[j]);
-
-            }
+        String[] temp1 = data.split(",");
+        Integer[] temp2 = new Integer[temp1.length];
+        for( int i = 0 ; i < temp1.length ; i++){
+            temp2[i] = Integer.valueOf(temp1[i]);
         }
-        return temp;
+        return temp2;
     }
 
     public static void main(String[] args){
@@ -56,8 +48,10 @@ public class MyApp
         Circle c1 = makeCircle(array[0], array[1], array[2]);
         Circle c2 = makeCircle(array[3], array[4], array[5]);
         
-        System.out.println("원1 : " + c1 +" ==> 면적 : " + c1.getArea());
-        System.out.println("원2 : " + c2 +" ==> 면적 : " + c2.getArea());
+        System.out.println("원1 : " + c1.printCircle() +
+                                " ==> 면적 : " + c1.getArea());
+        System.out.println("원2 : " + c2.printCircle() +
+                                " ==> 면적 : " + c2.getArea());
         if (c1.equals(c2) == true )
             System.out.println("같은 원");
         else
