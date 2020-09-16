@@ -12,8 +12,9 @@ public class MyApp
     public Circle makeCircle(int x, int y, int radius)
     {
         Circle c = new Circle(x, y, radius);
+        return c;
     }
-   
+
     public static void main(String[] args){
         Integer[] array;
         String data = "2,3,5,2,3,10";

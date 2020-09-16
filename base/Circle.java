@@ -8,14 +8,14 @@ package base;
  */
 public class Circle
 {
-    private int x; // 원의 x좌표
-    private int y; // 원의 y좌표
-    private int radius; // 원의 반지름
+    public int x; // 원의 x좌표
+    public int y; // 원의 y좌표
+    public int radius; // 원의 반지름
     
     /**
      * Constructor for objects of class Circle
      */
-    public Circle()
+    public Circle(int x, int y, int radius)
     {
         this.x = x;
         this.y = y;
