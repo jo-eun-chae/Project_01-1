@@ -1,5 +1,6 @@
 import base.*;
 import myInterface.*;
+import java.util.StringTokenizer;
 /**
  * Write a description of class MyApp here.
  *
@@ -12,12 +13,7 @@ public class MyApp
     {
         Circle c = new Circle(x, y, radius);
     }
-    
-    public Shape makeToken()
-    {
-        StringTokenizer array = new StringTokenizer( ,",");
-    }
-
+   
     public static void main(String[] args){
         Integer[] array;
         String data = "2,3,5,2,3,10";
@@ -32,5 +28,16 @@ public class MyApp
             System.out.println("같은 원");
         else
             System.out.println("서로 다른 원");
+    }
+    
+    public int[] makeToken(String data)
+    {
+        Integer[] Circle;
+        int i = 0;
+        StringTokenizer array = new StringTokenizer(data ,",");
+        while(data.hasMoreTokens()){
+             Circle[i] += Integer.parseInt(data.nextToken());
+             i++;
+        }
     }
 }
