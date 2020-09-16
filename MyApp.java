@@ -1,5 +1,5 @@
-import myInterface.*;
 import base.*;
+import myInterface.*;
 /**
  * Write a description of class MyApp here.
  *
@@ -8,7 +8,6 @@ import base.*;
  */
 public class MyApp
 {
-    
     public Circle makeCircle(int x, int y, int radius)
     {
         Circle c = new Circle(x, y, radius);
@@ -18,7 +17,7 @@ public class MyApp
     {
         StringTokenizer array = new StringTokenizer( ,",");
     }
-    
+
     public static void main(String[] args){
         Integer[] array;
         String data = "2,3,5,2,3,10";
@@ -29,12 +28,9 @@ public class MyApp
         
         System.out.println("원1 : " + c1 +" ==> 면적 : " + c1.getArea());
         System.out.println("원2 : " + c2 +" ==> 면적 : " + c2.getArea());
-        if ( (c1.getArea()) == (c2.getArea()) )
+        if (c1.equals(c2) == true )
             System.out.println("같은 원");
         else
             System.out.println("서로 다른 원");
-
-
     }
-  
 }
