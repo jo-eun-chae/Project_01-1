@@ -17,7 +17,7 @@ public class MyApp
 
     public int[] makeToken(String data)
     {
-        
+        StringTokenizer array = new StringTokenizer(",");
     }
 
     public static void main(String[] args){
