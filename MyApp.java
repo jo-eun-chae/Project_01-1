@@ -18,7 +18,7 @@ public class MyApp
      * @param  radian  원의 반지름
      * @return    Circle 객체
      */
-    public Circle makeCircle(int x, int y, int radius)
+    public static Circle makeCircle(Integer x, Integer y, Integer radius)
     {
         Circle c = new Circle(x, y, radius);
         return c;
@@ -30,18 +30,16 @@ public class MyApp
      * @param  data  a sample parameter for a method
      * @return    배열
      */
-    public int[] makeToken(String data)
+    public static Integer[] makeToken(String data)
     {
-        Integer[] Circle;
         int i = 0;
-        StringTokenizer array = new StringTokenizer(",");
-        while(data.hasMoreTokens()){
-             Circle[i] += Integer.parseInt(data.nextToken());
-             i++;
+        StringTokenizer array = new StringTokenizer(data, ",");
+        while(array.hasMoreTokens() == true){
+            
+            temp[i] += Integer.parseInt(array.nextToken());
+            i++;
         }
-        
-        Integer[] array = data.split
-        for( int i = 0 ; i < len(array))
+        return temp;
     }
 
     public static void main(String[] args){

@@ -9,14 +9,14 @@ import myInterface.Shape;
  */
 public class Circle implements myInterface.Shape
 {
-    private int x; // 원의 x좌표
-    private int y; // 원의 y좌표
-    private int radius; // 원의 반지름
+    private Integer x; // 원의 x좌표
+    private Integer y; // 원의 y좌표
+    private Integer radius; // 원의 반지름
     
     /**
      * Constructor for objects of class Circle
      */
-    public Circle(int x, int y, int radius)
+    public Circle(Integer x, Integer y, Integer radius)
     {
         this.x = x;
         this.y = y;
