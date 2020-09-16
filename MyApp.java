@@ -16,7 +16,7 @@ public class MyApp
     
     public Shape makeToken()
     {
-        
+        StringTokenizer array = new StringTokenizer( ,",");
     }
     
     public static void main(String[] args){
