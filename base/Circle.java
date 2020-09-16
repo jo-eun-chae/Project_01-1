@@ -1,4 +1,5 @@
 package base;
+import myInterface.Shape;
 
 /**
  * Circle 클래스
@@ -6,11 +7,11 @@ package base;
  * @author (2019315011 조은채)
  * @version (2020.09.16)
  */
-public class Circle
+public class Circle implements myInterface.Shape
 {
-    public int x; // 원의 x좌표
-    public int y; // 원의 y좌표
-    public int radius; // 원의 반지름
+    private int x; // 원의 x좌표
+    private int y; // 원의 y좌표
+    private int radius; // 원의 반지름
     
     /**
      * Constructor for objects of class Circle
@@ -35,5 +36,15 @@ public class Circle
             return true;
         else
             return false;
+    }
+    /**
+     * 원의 넓이를 구하는 메소드
+     *
+     * @return    원의 넓이
+     */
+    @Override
+    public double getArea()
+    {
+        return 2 * PI * this.radius;
     }
 }
