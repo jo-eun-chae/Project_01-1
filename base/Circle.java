@@ -9,23 +9,23 @@ import myInterface.Shape;
  */
 public class Circle implements myInterface.Shape
 {
-    private Integer x; // 원의 x좌표
-    private Integer y; // 원의 y좌표
-    private Integer radius; // 원의 반지름
+    public Integer x; // 원의 x좌표
+    public Integer y; // 원의 y좌표
+    public Integer radius; // 원의 반지름
     
     /**
      * Constructor for objects of class Circle
      */
     public Circle(Integer x, Integer y, Integer radius)
     {
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
+        this.x = x.intValue();
+        this.y = y.intValue();
+        this.radius = radius.intValue();
     }
 
     /**
      * 같은 원인지 아닌지 판단하는 메소드
-     *
+     * 
      * @param  obj  Circle 메소드에서 만든 객체
      * @return    true or false
      */

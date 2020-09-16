@@ -18,10 +18,11 @@ public class MyApp
      * @param  radian  원의 반지름
      * @return    Circle 객체
      */
-    public static Circle makeCircle(Integer x, Integer y, Integer radius)
+    public static String makeCircle(Integer x, Integer y, Integer radius)
     {
         Circle c = new Circle(x, y, radius);
-        return c;
+        String cir = "원(" + c.x + ", " + c.y + ", " + c.radius + ")";
+        return cir;
     }
     
     /**
