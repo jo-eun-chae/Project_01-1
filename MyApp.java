@@ -25,19 +25,26 @@ public class MyApp
     }
     
     /**
-     * An example of a method - replace this comment with your own
+     * Interger 배열에 Stirng data를 저장하는 메소드
      *
-     * @param  data  a sample parameter for a method
+     * @param  data  Circle 객체를 만들기 위해 필요한 정보
      * @return    배열
      */
     public static Integer[] makeToken(String data)
     {
-        int i = 0;
-        StringTokenizer array = new StringTokenizer(data, ",");
-        while(array.hasMoreTokens() == true){
-            
-            temp[i] += Integer.parseInt(array.nextToken());
-            i++;
+        // Integer[] temp;
+        // StringTokenizer array = new StringTokenizer(data, ",");
+        // int i = 0;
+        // while(array.hasMoreTokens() == true){
+            // temp[i] = Integer.parseInt(array.nextToken());
+            // i++;
+        // }
+        // return temp;
+        
+        String[] temp1 = data.split(",");
+        Integer[] temp = new Integer[temp1.length];
+        for(int i = 0 ; i < temp1.length ; i++){
+            temp[i] = Integer.valueOf(temp1[i]);
         }
         return temp;
     }
