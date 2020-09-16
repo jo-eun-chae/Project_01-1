@@ -10,22 +10,23 @@ import java.util.StringTokenizer;
  */
 public class MyApp
 {
-    public static Circle makeCircle(int x, int y, int radius)
+    public static Circle makeCircle(Integer x, Integer y, Integer radius)
     {
         Circle c = new Circle(x, y, radius);
         return c;
     }
     
-    public int[] makeToken(StringTokenizer data)
+    public Integer[] makeToken(StringTokenizer dataToken)
     {
-        Integer[] Circle;
+        Integer[] arrayToken;
         int i = 0;
+        String data;
         StringTokenizer array = new StringTokenizer(data, ",");
-        while(data.hasMoreTokens()){
-             Circle[i] += Integer.parseInt(data.nextToken());
+        while(dataToken.hasMoreTokens()){
+             arrayToken[i] += Integer.parseInt(dataToken.nextToken());
              i++;
         }
-        
+        return arrayToken;
     }
 
     public static void main(String[] args){
