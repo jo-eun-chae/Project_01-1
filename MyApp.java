@@ -10,23 +10,37 @@ import java.util.StringTokenizer;
  */
 public class MyApp
 {
+    /**
+     * Circle 객체를 만드는 메소드
+     *
+     * @param  x  원의 x좌표
+     * @param  y  원의 y좌표
+     * @param  radian  원의 반지름
+     * @return    Circle 객체
+     */
     public static Circle makeCircle(Integer x, Integer y, Integer radius)
     {
         Circle c = new Circle(x, y, radius);
         return c;
     }
     
-    public Integer[] makeToken(StringTokenizer dataToken)
+    /**
+     * An example of a method - replace this comment with your own
+     *
+     * @param  data  a sample parameter for a method
+     * @return    배열
+     */
+    public static Integer[] makeToken(String dataToken)
     {
-        Integer[] arrayToken;
+        Integer[] temp;
         int i = 0;
         String data;
-        StringTokenizer array = new StringTokenizer(data, ",");
-        while(dataToken.hasMoreTokens()){
-             arrayToken[i] += Integer.parseInt(dataToken.nextToken());
-             i++;
+        StringTokenizer array = new StringTokenizer(dataToken, ",");
+        while(array.hasMoreTokens() == true){
+            temp[i] += Integer.parseInt(array.nextToken());
+            i++;
         }
-        return arrayToken;
+        return temp;
     }
 
     public static void main(String[] args){
@@ -44,5 +58,4 @@ public class MyApp
         else
             System.out.println("서로 다른 원");
     }
-    
 }
