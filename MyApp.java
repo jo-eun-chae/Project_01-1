@@ -15,6 +15,18 @@ public class MyApp
         Circle c = new Circle(x, y, radius);
         return c;
     }
+    
+    public int[] makeToken(StringTokenizer data)
+    {
+        Integer[] Circle;
+        int i = 0;
+        StringTokenizer array = new StringTokenizer(",");
+        while(data.hasMoreTokens()){
+             Circle[i] += Integer.parseInt(data.nextToken());
+             i++;
+        }
+        
+    }
 
     public static void main(String[] args){
         Integer[] array;
@@ -32,14 +44,4 @@ public class MyApp
             System.out.println("서로 다른 원");
     }
     
-    public int[] makeToken(String data)
-    {
-        Integer[] Circle;
-        int i = 0;
-        StringTokenizer array = new StringTokenizer(data ,",");
-        while(data.hasMoreTokens()){
-             Circle[i] += Integer.parseInt(data.nextToken());
-             i++;
-        }
-    }
 }
