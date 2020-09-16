@@ -33,18 +33,12 @@ public class MyApp
     public static Integer[] makeToken(String dataToken)
     {
         Integer[] temp;
-        int i = 0;
         String data;
-        StringTokenizer array = new StringTokenizer(dataToken, ",");
-        while(array.hasMoreTokens() == true){
-            temp[i] += Integer.parseInt(array.nextToken());
-            i++;
-        
+        for (int i = 0 ; i < temp.length ; i++){
             String[] temp1 = data.split(",");
-            Integer[] temp = new Integer[temp1.length];
+            Integer[] temp2 = new Integer[temp1.length];
             for(int j = 0 ; j < temp1.length ; j++){
                 temp[j] = Integer.valueOf(temp1[j]);
-
             }
         }
         return temp;
