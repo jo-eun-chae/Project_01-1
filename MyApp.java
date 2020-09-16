@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
  */
 public class MyApp
 {
-    public Circle makeCircle(int x, int y, int radius)
+    public static Circle makeCircle(int x, int y, int radius)
     {
         Circle c = new Circle(x, y, radius);
         return c;
@@ -20,7 +20,7 @@ public class MyApp
     {
         Integer[] Circle;
         int i = 0;
-        StringTokenizer array = new StringTokenizer(",");
+        StringTokenizer array = new StringTokenizer(data, ",");
         while(data.hasMoreTokens()){
              Circle[i] += Integer.parseInt(data.nextToken());
              i++;
