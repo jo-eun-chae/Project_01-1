@@ -1,5 +1,5 @@
-import myInterface.*;
 import base.*;
+import myInterface.*;
 
 /**
  * Write a description of class MyApp here.
@@ -12,12 +12,12 @@ public class MyApp
     public Circle makeCircle(int x, int y, int radius)
     {
         Circle c = new Circle(x, y, radius);
+        return c;
     }
-    
+
     public int[] makeToken(String data)
     {
-        StringTokenizer array = new StringTokenizer( ,",");
-        return array;
+        
     }
 
     public static void main(String[] args){
