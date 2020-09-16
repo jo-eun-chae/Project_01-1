@@ -31,21 +31,22 @@ public class MyApp
      * @param  data  Circle 객체를 만들기 위해 필요한 정보
      * @return    배열
      */
-    public static Integer[] makeToken(String data)
+    public static Integer[] makeToken(String dataToken)
     {
-        // Integer[] temp;
-        // StringTokenizer array = new StringTokenizer(data, ",");
-        // int i = 0;
-        // while(array.hasMoreTokens() == true){
-            // temp[i] = Integer.parseInt(array.nextToken());
-            // i++;
-        // }
-        // return temp;
+        Integer[] temp;
+        int i = 0;
+        String data;
+        StringTokenizer array = new StringTokenizer(dataToken, ",");
+        while(array.hasMoreTokens() == true){
+            temp[i] += Integer.parseInt(array.nextToken());
+            i++;
         
-        String[] temp1 = data.split(",");
-        Integer[] temp = new Integer[temp1.length];
-        for(int i = 0 ; i < temp1.length ; i++){
-            temp[i] = Integer.valueOf(temp1[i]);
+            String[] temp1 = data.split(",");
+            Integer[] temp = new Integer[temp1.length];
+            for(int j = 0 ; j < temp1.length ; j++){
+                temp[j] = Integer.valueOf(temp1[j]);
+
+            }
         }
         return temp;
     }
