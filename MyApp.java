@@ -9,6 +9,17 @@ import base.*;
  */
 public class MyApp
 {
+    public Circle makeCircle(int x, int y, int radius)
+    {
+        Circle c = new Circle(x, y, radius);
+    }
+    
+    public int[] makeToken(String data)
+    {
+        StringTokenizer array = new StringTokenizer( ,",");
+        return array;
+    }
+
     public static void main(String[] args){
         Integer[] array;
         String data = "2,3,5,2,3,10";
@@ -23,13 +34,5 @@ public class MyApp
             System.out.println("같은 원");
         else
             System.out.println("서로 다른 원");
-    }
-    public Circle makeCircle(int x, int y, int radius)
-    {
-        Circle c = new Circle(x, y, radius);
-    }
-    public Shape makeToken()
-    {
-        
     }
 }
