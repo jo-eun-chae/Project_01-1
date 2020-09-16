@@ -18,11 +18,10 @@ public class MyApp
      * @param  radian  원의 반지름
      * @return    Circle 객체
      */
-    public static String makeCircle(Integer x, Integer y, Integer radius)
+    public static Circle makeCircle(Integer x, Integer y, Integer radius)
     {
         Circle c = new Circle(x, y, radius);
-        String cir = "원(" + c.x + ", " + c.y + ", " + c.radius + ")";
-        return cir;
+        return c;
     }
     
     /**
@@ -33,16 +32,14 @@ public class MyApp
      */
     public static Integer[] makeToken(String dataToken)
     {
-        Integer[] temp;
         int i = 0;
         String data;
         StringTokenizer array = new StringTokenizer(dataToken, ",");
         while(array.hasMoreTokens() == true){
-            temp[i] += Integer.parseInt(array.nextToken());
-            i++;
-        
             String[] temp1 = data.split(",");
             Integer[] temp = new Integer[temp1.length];
+            temp[i] += Integer.parseInt(array.nextToken());
+            i++;
             for(int j = 0 ; j < temp1.length ; j++){
                 temp[j] = Integer.valueOf(temp1[j]);
 

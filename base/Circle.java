@@ -18,9 +18,9 @@ public class Circle implements myInterface.Shape
      */
     public Circle(Integer x, Integer y, Integer radius)
     {
-        this.x = x.intValue();
-        this.y = y.intValue();
-        this.radius = radius.intValue();
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
     }
 
     /**
@@ -45,6 +45,7 @@ public class Circle implements myInterface.Shape
     @Override
     public double getArea()
     {
-        return 2 * PI * this.radius;
+        int rad = (this.radius).intValue();
+        return 2 * PI * rad;
     }
 }
